@@ -15,7 +15,7 @@ def answer(bot, update):
     if update.message.text=="":   # Print here your pin
         bot.send_message(update.message.chat_id, text="Удачно!")
         img = ImageGrab.grab()
-        img.save("", "JPEG")   #Print route to folder. It must be same where screenshot_bot.py is located
+        img.save("", "JPEG")   #Print route to folder. It should be the same as where screenhot_bot.py is located
         bot.sendPhoto(chat_id=update.message.chat_id, photo=open('temp_screen.jpg', 'rb'))
         bot.send_message(update.message.chat_id, text="Температура")
     else:
